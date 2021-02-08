@@ -20,6 +20,6 @@ from new_user.views import new_user_menu
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('new_user/', include('new_user.urls')),
-    path('new_user/', new_user_menu)
+    path('new_user/', include('new_user.urls')),
+    #path('new_user/', new_user_menu)
 ]

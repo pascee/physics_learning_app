@@ -2,6 +2,6 @@ from django.urls import path
 
 from . import views
 
-urlpatters = [
+urlpatterns = [
     path('', views.new_user_menu),
 ]
