@@ -16,10 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from new_user.views import new_user_menu
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('new_user/', include('new_user.urls')),
-    #path('new_user/', new_user_menu)
 ]
