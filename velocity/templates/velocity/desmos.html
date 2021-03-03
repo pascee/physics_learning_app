@@ -4,26 +4,30 @@
 
 <div id="calculator" style="width: 600px; height: 400px;"></div>
 
-<!--there are 3 graphs here. to start, we should make a button just for displacement which will update the graphs to show what the velocity and the acceleration should be. 
-    Need to research how to make the graphs update without refreshing the page  -->
+<!--there are 3 graphs here. to start, we should make a button just for displacement
+     which will update the graphs to show what the velocity and the acceleration should be.   -->
 
 <!-- Displacement -->
+
 <script>
     var elt = document.getElementById('calculator');
     var calculator = Desmos.GraphingCalculator(elt);
-    calculator.setExpression({ id: 'graph1', latex: '' });
+    calculator.setExpression({ id: 'graph1', latex: displacement });
 </script>
 
+
+<!--velocity = calculations.diff(displacement)-->
 <!-- Velocity -->
 <script>
     var elt = document.getElementById('calculator');
     var calculator = Desmos.GraphingCalculator(elt);
-    calculator.setExpression({ id: 'graph1', latex: '' });
+    calculator.setExpression({ id: 'graph1', latex: 'velocity' });
 </script>
 
+<!--acceleration = calculations.doubleDiff(displacement)-->
 <!-- Acceleration -->
 <script>
     var elt = document.getElementById('calculator');
     var calculator = Desmos.GraphingCalculator(elt);
-    calculator.setExpression({ id: 'graph1', latex: '' });
+    calculator.setExpression({ id: 'graph1', latex: 'acceleration' });
 </script>
