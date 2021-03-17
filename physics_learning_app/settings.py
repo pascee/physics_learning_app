@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'new_user',
+    'drag_forces_sim',
     'velocity'
 ]
 
