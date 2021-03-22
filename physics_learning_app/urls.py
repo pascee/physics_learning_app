@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('new_user/', include('new_user.urls')),
     path('velocity/', include('velocity.urls')),
+    path('drag/', include('drag_forces_sim.urls')),
 ]
