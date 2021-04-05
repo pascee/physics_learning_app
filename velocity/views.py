@@ -2,27 +2,32 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 
 from .forms import EquationForm
+from . import calculations
 
 #from json import dumps
 
 # Create your views here.
 #very basic render request that displays the desmos.html page
-def graph(request, your_equation):
-    context = {
-        'your_equation' : your_equation
-        }
-    return render(request, 'velocity/desmos.html', context)
-
-def get_equation(request):
+def graph(request, your_equation = 'x'):
     if request.method == 'POST':
         form = EquationForm(request.POST)
         if form.is_valid():
-            return HttpResponseRedirect('')
+            data = form.cleaned_data
+            your_equation = data['equation_input']
+
     else: 
         form = EquationForm()
-        
-    return render(request, 'velocity/equation_intake.html', {'form': form})
 
-def goToGraph(request):
-    return HttpResponseRedirect('velocity/graph/<your_equation>')
-    
+    velocity = calculations.differentiate(your_equation)
+    acceleration = calculations.doubleDifferentiate(your_equation)
+
+    context = {
+        'your_equation' : your_equation,
+        'form' : form,
+        'velocity' : velocity,
+        'acceleration' : acceleration,
+    }
+            
+
+    return render(request, 'velocity/FinalDesmos.html', context)
+

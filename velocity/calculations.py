@@ -2,20 +2,23 @@ from sympy import *
 x = Symbol('x')
 
 
-#idk if these methods are made correctly or if they should be in this file
 #takes in an equation for displacement as a string and derives it to find velocity
-def diff(f):
-    f_prime = f.diff(x)
-    # not sure if this acutally works like i think it does so maybe remove and instead in the =x before entering into the graph
-    f_prime = lambdify(x,f)
+def differentiate(your_equation):
+    your_equation = your_equation.replace("^", "**")
+    f_prime = diff(your_equation)
+    f_prime = str(f_prime)
+    if "x" not in f_prime:
+        f_prime = 'y=' + f_prime
+    your_equation = your_equation.replace("**", "^")
 
     return f_prime
 
 #takes in an equation for displacement as a string and double derives it to find acceleration
-def doubleDiff(f):
-    f_prime = f.diff(x)
-    f_double_prime = f_prime.diff(x)
-   # not sure if this acutally works like i think it does so maybe remove and instead in the =x before entering into the graph
-    f_double_prime = lambdify(x,f)
-    
+def doubleDifferentiate(your_equation):
+    your_equation = your_equation.replace("^", "**")
+    f_double_prime = diff(your_equation, x, x)
+    f_double_prime = str(f_double_prime)
+    if "x" not in f_double_prime:
+        f_double_prime = 'y=' + f_double_prime
+    your_equation = your_equation.replace("**", "^")
     return f_double_prime
