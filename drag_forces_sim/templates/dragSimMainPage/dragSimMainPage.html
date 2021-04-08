@@ -8,6 +8,19 @@
         <h1>Drag Simulation</h1>
         {% load static %}
         <img src="{% static 'circle.jpg' %}" alt="A Ball" style="width:158px;height:128px">
+        
+        <button type="button" onclick="jstest()">Click me to test!</button>
+
+        <p id="display"> initial value</p>
+
+        
+
+        <script>
+            function jstest(){
+                document.getElementById("display").innerHTML = "new value!";
+            }
+
+        </script>
 
     </body>
 </html>

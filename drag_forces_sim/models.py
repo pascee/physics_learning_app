@@ -11,7 +11,15 @@ class DragObject(models.Model):
     #returns the name of the object
     def __str__(self):
         return self.objName
-    
+
+    #sets initial values for each field
+    def __init__(self):
+        self.objname = "new_drag_object"
+        self.dragCoeficient = 1
+        self.currentSpeed = 0
+        self.gravitationalConstant = 9.8
+        self.objMass = 1
+        
     # finds the instantaneous drag force, used in instances in which the object
     # is small and falling through a liquid 
     def returnDragForceV(self):
