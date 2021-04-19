@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'new_user',
     'drag_forces_sim',
-    'velocity'
+    'velocity',
+    'time_dilation',
 ]
 
 MIDDLEWARE = [

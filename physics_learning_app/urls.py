@@ -23,4 +23,5 @@ urlpatterns = [
     path('velocity/', include('velocity.urls')),
     path('drag/', include('drag_forces_sim.urls')),
     path('', views.main_page),
+    path('timeDilation/', include('time_dilation.urls')),
 ]
