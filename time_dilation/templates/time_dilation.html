@@ -1,10 +1,14 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
+    
     <head>
         <meta charset="UTF-8">
         <title>T Dilation Sim</title>
-        <link rel="stylesheet" href="style.css">
-        
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+         
+
     </head>
     <body>
         <div id="game">
@@ -14,5 +18,5 @@
         <button id="button" onclick="startAnimation();">Start Simulation</button>
        
     </body>    
-    <script src="script.js"></script>
+    <script src="{% static 'script.js' %}"></script>
 </html>
