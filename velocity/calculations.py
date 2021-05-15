@@ -9,7 +9,7 @@ def differentiate(your_equation):
     f_prime = str(f_prime)
     if "x" not in f_prime:
         f_prime = 'y=' + f_prime
-    your_equation = your_equation.replace("**", "^")
+    f_prime = f_prime.replace("**", "^")
 
     return f_prime
 
@@ -20,5 +20,19 @@ def doubleDifferentiate(your_equation):
     f_double_prime = str(f_double_prime)
     if "x" not in f_double_prime:
         f_double_prime = 'y=' + f_double_prime
-    your_equation = your_equation.replace("**", "^")
+    f_double_prime = f_double_prime.replace("**", "^")
     return f_double_prime
+
+def integ(your_equation):
+    your_equation = your_equation.replace("^", "**")
+    integral = integrate(your_equation, x)
+    integral = str(integral)
+    if "x" not in integral:
+        integral = 'y=' + integral
+    integral = integral.replace("**", "^")
+    return integral
+
+def doubleInteg(your_equation):
+    integral = integ(your_equation)
+    double_integral = integ(integral)
+    return double_integral
