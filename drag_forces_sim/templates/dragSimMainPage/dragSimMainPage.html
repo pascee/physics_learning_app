@@ -1,26 +1,23 @@
-<!DOCTYPE html>
+<!DOCTYPE hmtl>
 <html>
-    <head>
-        <title>Drag Forces Demo</title>
-    </head>
 
-    <body>
-        <h1>Drag Simulation</h1>
-        {% load static %}
-        <img src="{% static 'circle.jpg' %}" alt="A Ball" style="width:158px;height:128px">
-        
-        <button type="button" onclick="jstest()">Click me to test!</button>
+  <body>
 
-        <p id="display"> initial value</p>
+    <script type="text/javascript" src="dragSimMainPageJavascript.js"></script>
 
-        
+    <p>Mass of the object: <input type="text" id="mass" size="4"></p>
+    <p>Drag Coefficient: <input type="text" id="d_coefficient" size="4"></p>
+    <p>gravity constant: <input type="text" id="g" size="4"></p>
+    <p>starting velocity: <input type="text" id="start_vel" size="4"></p>
+    <p>seconds per iteration (enter a number 0.01 or higher): <input type="text" id="i_time" size="4"></p>
 
-        <script>
-            function jstest(){
-                document.getElementById("display").innerHTML = "new value!";
-            }
+    <button id="iteration_button" class="myButton">Iterate!</button>
+    <p> </p>
+    <button id="reset_button" class="myButtonReset">Reset</button>
 
-        </script>
+    <p>Current Velocity:
+      <span id="current_vel">n/a</span></p>
 
-    </body>
+  </body>
+
 </html>
