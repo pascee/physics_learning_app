@@ -1,10 +1,13 @@
+{% load static %}
+
 <!DOCTYPE hmtl>
 <html>
 
+  <head>
+    
+  </head>
+
   <body>
-
-    <script type="text/javascript" src="dragSimMainPageJavascript.js"></script>
-
     <p>Mass of the object: <input type="text" id="mass" size="4"></p>
     <p>Drag Coefficient: <input type="text" id="d_coefficient" size="4"></p>
     <p>gravity constant: <input type="text" id="g" size="4"></p>
@@ -18,6 +21,7 @@
     <p>Current Velocity:
       <span id="current_vel">n/a</span></p>
 
+      <script src="{% static 'dragSimMainPageJavascript.js' %}"></script>
   </body>
 
 </html>

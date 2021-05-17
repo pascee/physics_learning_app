@@ -1,7 +1,11 @@
-var iterationButton = document.getElementById("iteration_button");
-iterationButton.onclick = function() {
+
+function iterationShellFunc(){
   dragIntegral();
 }
+
+var iterationButton = document.getElementById("iteration_button");
+iterationButton.onclick = iterationShellFunc;
+
 
 //I'm not sure why I have to do this, but doing it like above doesn't work for some reason.
 function function2(){
@@ -65,5 +69,4 @@ function resetAllFields() {
   document.getElementById("start_vel").value = "";
   document.getElementById("i_time").value = "";
   document.getElementById("current_vel").innerText = "n/a";
-
 }
