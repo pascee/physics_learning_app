@@ -1,5 +1,5 @@
-<h1>welcome to the graphing page</h1>
-<h2>Hello, your displacement equation was {{ your_equation }}, your velocity equation was {{ velocity}}, and your acceleration equation was {{ acceleration}}.</h2>
+<h1>Welcome to the graphing page, please place operators inbetween all numbers and variables for the smoothest experience</h1>
+<h2>Your displacement equation is {{ displacement }}, your velocity equation is {{ velocity }}, and your acceleration equation is {{ acceleration}}.</h2>
 
 
 
@@ -7,7 +7,7 @@
 
 
 
-<h1>Equation intake</h1>
+<h2>Equation intake</h2>
 <form action= "" method="POST">
     {{ form }}
 
@@ -29,18 +29,20 @@
 
 <!-- Displacement -->
 
-
-
+<br>
+<p>Displacement graph</p>
 <script>
     
     var elt = document.getElementById('calculator');
     var calculator = Desmos.GraphingCalculator(elt);
-    calculator.setExpression({ id: 'graph1', latex: "{{ your_equation}}", });
+    calculator.setExpression({ id: 'graph1', latex: "{{ displacement }}", });
 </script>
 
 
 <!--velocity = calculations.diff(displacement)-->
 <!-- Velocity -->
+<br>
+<p>Velocity graph</p>
 <script>
     var elt = document.getElementById('calculator');
     var calculator = Desmos.GraphingCalculator(elt);
@@ -49,6 +51,8 @@
 
 <!--acceleration = calculations.doubleDiff(displacement)-->
 <!-- Acceleration -->
+<br>
+<p>Acceleration graph</p>
 <script>
     var elt = document.getElementById('calculator');
     var calculator = Desmos.GraphingCalculator(elt);

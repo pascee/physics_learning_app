@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>T Dilation Sim</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+         
+
+    </head>
+    <body>
+        <div id="game">
+            <div id="spaceship"></div>
+        </div>
+        
+        <button id="button" onclick="startAnimation();">Start Simulation</button>
+       
+    </body>    
+    <script src="{% static 'script.js' %}"></script>
+</html>
