@@ -12,34 +12,11 @@
     </head>
     <body>
         <div id="game">
-            <div id="spaceship">
-                <img src="{% static 'spaceship.png' %}">
-                <div id="filling"></div>
-                <div id="mirrors">
-                    <div id="grey"></div>
-                    <div id="photon"></div>
-                </div>
-            </div>
+            <div id="spaceship"></div>
         </div>
+        
         <button id="button" onclick="startAnimation();">Start Simulation</button>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div id="game">
-            <div id="spaceship2">
-                <img src="{% static 'spaceship.png' %}">
-                <div id="filling"></div>
-                <div id="mirrors">
-                    <div id="grey"></div>
-                    <div id="photon2"></div>
-                </div>
-            </div>
-        </div>
-        <button id="button2" onclick="startAnimation2();">Start Simulation</button>
+       
     </body>    
     <script src="{% static 'script.js' %}"></script>
 </html>
