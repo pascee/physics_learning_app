@@ -40,11 +40,6 @@
     position: relative;
     top: 50px;
     left: 450px;
-<<<<<<< Updated upstream
-    
-=======
-
->>>>>>> Stashed changes
 }
 #filling{
     width: 100px;
@@ -103,10 +98,6 @@
     animation-duration: 8s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 }
 @keyframes slide{
     0%{left: 0px;}
@@ -122,8 +113,4 @@
     75%{top: 15px}
     87.5%{top: -85px;}
     100%{top: 15px;}
-<<<<<<< Updated upstream
 }
-=======
-} 
->>>>>>> Stashed changes
