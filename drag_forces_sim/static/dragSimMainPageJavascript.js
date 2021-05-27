@@ -19,7 +19,7 @@ function getGravForce() {
   var g = parseFloat(document.getElementById("g").value);
   var m = parseFloat(document.getElementById("mass").value);
 
-  return g * m;
+  return g * m * -1;
 }
 
 //you need to give the function the name of the velocity variable to use for flexibility
@@ -27,7 +27,7 @@ function getDragForce(vel_var_id) {
   var dc = parseFloat(document.getElementById("d_coefficient").value);
   var vel = parseFloat(document.getElementById(vel_var_id).innerText);
 
-  return dc * vel * vel * -1;
+  return dc * vel * vel * Math.sign(vel) * -1;
 }
 
 function getTotalForce(vel_var_id) {
@@ -36,12 +36,12 @@ function getTotalForce(vel_var_id) {
   return (df + gf);
 }
 
+//performs a numeric integral of drag force divided my the mass of the object 
+//to get the change in velocity of the object and set current_vel to it.
 function dragIntegral() {
-  //console.log("running dragIntegral");
-
   var m = parseFloat(document.getElementById("mass").value);
-  var dc = parseFloat(document.getElementById("d_coefficient").value);
-  var gc = parseFloat(document.getElementById("g").value);
+  //var dc = parseFloat(document.getElementById("d_coefficient").value);
+  //var gc = parseFloat(document.getElementById("g").value);
   var t = parseFloat(document.getElementById("i_time").value);
   var v_id = "";
 
